@@ -59,9 +59,10 @@
             type="password"
             formControlName="password"
             class="form-control"
-            [ngClass]="{ 'is-invalid': submitted && f.email.errors }"
+            [ngClass]="{ 'is-invalid': submitted && f.password.errors }"
           />
         </label>
+        <!-- <div *ngIf="f.password.errors['required']">Password is required</div> -->
       </div>
 
       <div class="text-center">
@@ -75,3 +76,5 @@
     </form>
   </div>
 </div>
+
+<!-- {{ f.password. }} -->

@@ -26,9 +26,9 @@ export class Exercise1Component implements OnInit {
 
   ngOnInit() {
     this.registerForm = this.formBuilder.group({
-      firstName: ['', Validators.required],
+      firstName: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, this.customPasswordValidator]],
+      password: ['', [Validators.required, this.customPasswordValidator()]],
     });
   }
   get f() {
@@ -51,9 +51,14 @@ export class Exercise1Component implements OnInit {
     console.log('validatoor  called ');
     return (control: AbstractControl): ValidationErrors | null => {
       const al = control.value;
-      console.log('dasdadsad');
 
-      return { password: true };
+      const regex =
+        /^(?=[a-zA-Z0-9#@$?]{8,}$)(?=.*?[a-z])(?=.*?[A-Z])(?=.*?[0-9]).*/;
+
+      const isValid = regex.test(al);
+
+      console.log('dasdadsad', al, isValid);
+      return { password: isValid };
     };
   }
 
