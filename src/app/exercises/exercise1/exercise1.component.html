@@ -65,7 +65,9 @@
       </div>
 
       <div class="text-center">
-        <button class="btn btn-primary mr-1">Submit</button>
+        <button class="btn btn-primary mr-1" [disabled]="registerForm.invalid">
+          Submit
+        </button>
         <button class="btn btn-secondary" type="reset" (click)="onReset()">
           Cancel
         </button>
@@ -73,7 +75,3 @@
     </form>
   </div>
 </div>
-
-<!-- {{ registerForm | json }} -->
-
-[disabled] ="registerForm.invalid"
