@@ -15,7 +15,7 @@ import {
   styleUrls: ['./exercise1.component.css'],
 })
 export class Exercise1Component implements OnInit {
-  registerForm: FormGroup<{
+  registerForm!: FormGroup<{
     firstName: FormControl<string | null>;
     password: FormControl<string | null>;
     email: FormControl<string | null>;
