@@ -1,0 +1,10 @@
+<div class="input-group">
+  <input class="form-control width100" #input />
+  <span class="input-group-btn">
+    <button class="btn btn-info" (click)="sendToChild(input.value)">
+      Button
+    </button>
+  </span>
+</div>
+<p>
+<app-child [value]= "value"></app-child>

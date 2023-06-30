@@ -1,0 +1,8 @@
+<app-inverted-parent [data]= "data"></app-inverted-parent>
+<p>
+<div class="input-group">
+  <input class="form-control width100" #input>
+  <span class="input-group-btn">
+  <button class="btn btn-info" (click)="sendToInvertedParent(input.value)">Button</button>
+  </span>
+  </div>
