@@ -1,0 +1,7 @@
+.box-outer {
+  border: 1px solid #ccc;
+  background-color: #ffffff;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 0.12rem;
+}
