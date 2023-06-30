@@ -17,6 +17,7 @@ import { Exercise4Module } from './exercise4/exercise4.module';
     Exercise1Module,
     Exercise4Module,
     RouterModule.forChild([
+      // Newly added For Laxy loading / Dynamic loading
       {
         path: '1',
         loadChildren: () =>
