@@ -28,7 +28,7 @@ export class Exercise1Component implements OnInit {
     this.registerForm = this.formBuilder.group({
       firstName: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(4), Validators.maxLength(10), Validators.pattern(/^(?=[a-zA-Z0-9#@$?]{8,}$)(?=.*?[a-z])(?=.*?[A-Z])(?=.*?[0-9]).*/)]],
+      password: ['', [Validators.required, Validators.minLength(4), Validators.maxLength(10), Validators.pattern(/^(?=[a-zA-Z0-9#@$?]).*/)]],
     });
   }
   get f() {
