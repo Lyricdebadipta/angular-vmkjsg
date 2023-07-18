@@ -6,18 +6,16 @@ import {AppComponent} from './app.component';
 import {RouterModule} from "@angular/router";
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot([{
-      path: 'exercises',
-      loadChildren: () =>   import('./exercises/exercises.module').then((m) => m.ExercisesModule),
-    }]),
+    // RouterModule.forRoot([{
+    //   path: 'exercises',
+    //   loadChildren: () =>   import('./exercises/exercises.module').then((m) => m.ExercisesModule),
+    // }]),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

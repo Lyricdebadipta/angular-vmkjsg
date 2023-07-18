@@ -13,8 +13,9 @@ import { RouterModule } from '@angular/router';
     CommonModule,
     RouterModule.forChild([{
       path: '',
-      component: Exercise3Component
-    }])
-  ]
+      component: Exercise3Component,
+    },
+  ]),
+  ],
 })
-export class Exercise3Module { }
+export class Exercise3Module {}
